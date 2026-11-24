@@ -1,9 +1,17 @@
 /* Menü verisini (js/menu-data.js) sayfaya yerleştirir. */
 
-const fiyat = (n) => n.toLocaleString("tr-TR");
+const fiyat = (n) => (typeof n === "number" ? n.toLocaleString("tr-TR") : n ?? "");
+
+// Ürün satırı iki şekilde yazılabilir:
+//   ["Ad", "Açıklama", fiyat]  veya açıklamasız  ["Ad", fiyat]
+function urunOku(u) {
+  if (u.length === 2 && typeof u[1] === "number") return [u[0], "", u[1]];
+  return u;
+}
 
 function kategoriHTML(k) {
   const urunler = k.urunler
+    .map(urunOku)
     .map(([ad, aciklama, tl]) => `
       <li class="it">
         <span class="n">${ad}</span><span class="p">${fiyat(tl)}</span>

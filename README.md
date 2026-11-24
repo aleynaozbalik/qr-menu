@@ -42,7 +42,7 @@ Sadece `js/menu-data.js` dosyasını düzenlemeniz yeterli:
 
 - Yeni ürün: ilgili kategoriye yeni bir satır ekleyin.
 - Yeni kategori: `MENU` listesine `{ baslik, altBaslik, figur, urunler }` bloğu ekleyin.
-- Kullanılabilir çizimler: `fig-fish`, `fig-olive`, `fig-shrimp`, `fig-lemon`, `fig-shell`, `fig-raki`.
+- Kullanılabilir çizimler: `fig-fish`, `fig-olive`, `fig-shrimp`, `fig-lemon`, `fig-shell`, `fig-raki`, `fig-salad` (salata kâsesi), `fig-dessert` (tatlı kâsesi).
 - Baskıda hangi kategorinin hangi sayfada duracağı: aynı dosyanın sonundaki `BASKI_SAYFALARI`.
 
 Restoran adı, çalışma saatleri, telefon ve Wi-Fi bilgisi `index.html` içindeki üst bölümdedir (`<header class="mast">`).

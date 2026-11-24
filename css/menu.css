@@ -119,9 +119,9 @@ body {
 .it .d { grid-column: 1 / -1; margin: 1px 0 0; color: var(--muted); font-size: .82rem; }
 
 /* ---------- Alt bilgi ---------- */
-.foot { text-align: center; padding: 6px 22px 26px; }
+.foot { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 6px 22px 26px; }
 .foot .anchor { width: 30px; height: 44px; display: block; margin: 0 auto 8px; color: var(--navy); }
-.foot .afiyet { font-family: var(--font-display); font-style: italic; font-size: 1.35rem; color: var(--navy); margin: 0 0 8px; }
+.foot .afiyet { font-family: var(--font-display); font-style: italic; font-size: 1.35rem; color: var(--navy); margin: 0 auto 8px; }
 .foot p { margin: 0 auto 4px; max-width: 62ch; font-size: .76rem; color: var(--muted); }
 .foot .note { margin-top: 10px; font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: var(--bloom); }
 
