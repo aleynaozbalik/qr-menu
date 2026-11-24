@@ -22,7 +22,6 @@ const MENU = [
       ["Izgara Palamut", 500],
       ["Izgara Lüfer", 500],
       ["Mezgit Tava", 500],
-      ["Barbun Tava", 500],
       ["Sardalya Tava", 500],
       ["Hamsi Tava", 500],
       ["Balık Köftesi", 500],

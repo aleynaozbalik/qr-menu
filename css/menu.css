@@ -15,7 +15,7 @@
   --bloom: #b8296f;       /* begonvil */
   --font-display: "Cormorant Garamond", "Times New Roman", Georgia, serif;
   --font-body: "Lato", system-ui, -apple-system, "Segoe UI", sans-serif;
-  color-scheme: light;
+  color-scheme: only light;
 }
 
 * { box-sizing: border-box; }
