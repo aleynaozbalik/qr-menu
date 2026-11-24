@@ -6,39 +6,31 @@
      altBaslik : Başlığın altındaki italik kısa not
      figur     : Çizim (fig-fish, fig-olive, fig-shrimp, fig-lemon, fig-shell, fig-raki,
                  fig-salad, fig-dessert)
-     urunler   : [ "Ürün adı", "Açıklama (boş bırakılabilir)", fiyat ]
+     urunler   : [ "Ürün adı", "Açıklama", fiyat ]  ya da açıklamasız  [ "Ürün adı", fiyat ]
 
    Fiyatlar TL cinsinden sayı olarak yazılır (1150 → "1.150" görünür).
    ========================================================= */
 
 const MENU = [
   {
-    baslik: "Izgara Balıklar",
+    baslik: "Balıklar",
     altBaslik: "Porsiyon fiyatlarıdır",
     figur: "fig-fish",
     urunler: [
-      ["Levrek", 500],
-      ["Çipura", 500],
-      ["Palamut",  500],
-      ["Lüfer",  500],
-    ],
-  },
-  {
-    baslik: "Tava Balıklar",
-    altBaslik: "Çıtır tava, porsiyon fiyatlarıdır",
-    figur: "fig-fish",
-    urunler: [
-      ["Mezgit", 500],
-      ["Barbun", 500],
-      ["Sardalya", 500],
-      ["Hamsi", 500],
-      ["Balık Köftesi", "... balığı", 500],
+      ["Izgara Levrek", 500],
+      ["Izgara Çipura", 500],
+      ["Izgara Palamut", 500],
+      ["Izgara Lüfer", 500],
+      ["Mezgit Tava", 500],
+      ["Barbun Tava", 500],
+      ["Sardalya Tava", 500],
+      ["Hamsi Tava", 500],
+      ["Balık Köftesi", 500],
       ["Balık Ekmek", "Sardalya", 500],
     ],
   },
   {
     baslik: "Soğuk Mezeler",
-    altBaslik: "Her gün mutfağımızda hazırlanır",
     figur: "fig-olive",
     urunler: [
       ["Haydari", "Süzme yoğurt, taze nane, sarımsak", 300],
@@ -50,7 +42,6 @@ const MENU = [
   },
   {
     baslik: "Ara Sıcaklar",
-    altBaslik: "Sıcak başlangıçlar",
     figur: "fig-shrimp",
     urunler: [
       ["Kalamar Tava", "Tarator sos ile servis edilir.", 300],
@@ -60,7 +51,6 @@ const MENU = [
   },
   {
     baslik: "Salatalar",
-    altBaslik: "Taze ve mevsiminde",
     figur: "fig-salad",
     urunler: [
       ["Mevsim Salata", "Kıvırcık marul, roka, domates, salatalık, biber", 300],
@@ -69,7 +59,6 @@ const MENU = [
   },
   {
     baslik: "Tatlılar",
-    altBaslik: "Tatlı bir kapanış",
     figur: "fig-dessert",
     urunler: [
       ["Kabak Tatlısı", "Tahin ve ceviz ile", 200],
@@ -78,7 +67,6 @@ const MENU = [
   },
   {
     baslik: "İçecekler",
-    altBaslik: "Soğuk ve serinletici",
     figur: "fig-raki",
     urunler: [
       ["Şalgam", "", 90],
@@ -93,9 +81,9 @@ const MENU = [
 
 /* Baskıda (A4) kategorilerin sayfalara ve sütunlara dağılımı.
    Sayılar yukarıdaki MENU listesindeki sıradır (0'dan başlar).
-   Örnek: [[0, 3], [1]] → sol sütun: Izgara Balıklar + Ara Sıcaklar,
-                          sağ sütun: Tava Balıklar */
+   Örnek: [[0], [1, 2]] → sol sütun: Balıklar,
+                          sağ sütun: Soğuk Mezeler + Ara Sıcaklar */
 const BASKI_SAYFALARI = {
-  sayfa1: [[0, 3], [1]],
-  sayfa2: [[2, 4], [5, 6]],
+  sayfa1: [[0], [1, 2]],
+  sayfa2: [[3, 4], [5]],
 };

@@ -25,7 +25,7 @@ function kategoriHTML(k) {
         <svg class="fig" aria-hidden="true"><use href="#${k.figur}"/></svg>
         <h2>${k.baslik}</h2>
         <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
-        <p>${k.altBaslik}</p>
+        ${k.altBaslik ? `<p>${k.altBaslik}</p>` : ""}
       </div>
       <ul class="items">${urunler}</ul>
     </section>`;
