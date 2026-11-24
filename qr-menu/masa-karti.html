@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mavi Kıyı Balıkçısı · Masa Kartı</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Lato:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/masa-karti.css">
+  <!-- QR kod üretici -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="helm" viewBox="0 0 120 120">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+        <circle cx="60" cy="60" r="40"/><circle cx="60" cy="60" r="33"/><circle cx="60" cy="60" r="22"/>
+        <circle cx="60" cy="60" r="9"/><circle cx="60" cy="60" r="4"/>
+        <g id="spoke">
+          <path d="M57.8 51 V27 M62.2 51 V27"/>
+          <path d="M57.8 20 V14.5 q-2.8 -2.5 -.6 -5.5 q-1.4 -3.5 2.8 -6.5 q4.2 3 2.8 6.5 q2.2 3 -.6 5.5 V20"/>
+        </g>
+        <use href="#spoke" transform="rotate(45 60 60)"/><use href="#spoke" transform="rotate(90 60 60)"/>
+        <use href="#spoke" transform="rotate(135 60 60)"/><use href="#spoke" transform="rotate(180 60 60)"/>
+        <use href="#spoke" transform="rotate(225 60 60)"/><use href="#spoke" transform="rotate(270 60 60)"/>
+        <use href="#spoke" transform="rotate(315 60 60)"/>
+      </g>
+    </symbol>
+    <pattern id="netP" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0 H16 M0 0 V16" stroke="#fff" stroke-width=".7" fill="none"/>
+    </pattern>
+  </defs>
+</svg>
+
+<!-- Tek kartın şablonu (masa-karti.js bunu çoğaltır ve QR'ı ekler) -->
+<template id="kart">
+  <article class="card">
+    <div class="top">
+      <svg class="net" aria-hidden="true"><rect width="100%" height="100%" fill="url(#netP)" opacity=".1"/></svg>
+      <div class="fr">
+        <svg class="helm" aria-hidden="true"><use href="#helm"/></svg>
+        <div class="eb">Balık · Meze </div>
+        <h1>....... Balıkçısı</h1>
+      </div>
+    </div>
+    <div class="cord"></div>
+    <div class="bot">
+      <div class="menu">Menümüz</div>
+      <div class="how">QR Kodu Okutunuz</div>
+      <div class="qrbox"><div class="qr" role="img" aria-label="Menü bağlantısı için QR kod">__QR__</div></div>
+      <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
+    </div>
+  </article>
+</template>
+
+<div class="wrap" id="wrap"></div>
+
+<script src="js/masa-karti.js"></script>
+</body>
+</html>
